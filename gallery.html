@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo-link">
+      <img src="placeholder-logo.png" alt="ShineWorks Logo" class="logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="auto.html">Auto Detailing</a></li>
+        <li><a href="windows.html">Window Washing</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section class="gallery">
+      <p>Photos coming soon! Check back to see our amazing before & after transformations.</p>
+    </section>
+  </main>
+
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year"></span> Auto & Windows. All rights reserved.</p>
+  </div>
+  <script>
+    // Dynamically update the footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+</body>
+</html>

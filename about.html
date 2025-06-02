@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo-link">
+      <img src="placeholder-logo.png" alt="ShineWorks Logo" class="logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="auto.html">Auto Detailing</a></li>
+        <li><a href="windows.html">Window Washing</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section class="about">
+      <p>We're a locally owned business committed to delivering exceptional detailing and window washing services. Our team is trained, professional, and dedicated to making your car and home shine.</p>
+
+      <h2>Contact Us</h2>
+      <ul>
+        <li><strong>Phone:</strong> (555) 123-4567</li>
+        <li><strong>Email:</strong> info@shineandsparkle.com</li>
+        <li><strong>Location:</strong> St. George, UT</li>
+      </ul>
+    </section>
+  </main>
+
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year"></span> Auto & Windows. All rights reserved.</p>
+  </div>
+  <script>
+    // Dynamically update the footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+</body>
+</html>

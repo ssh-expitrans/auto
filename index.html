@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShineWorks - Auto Detailing & Window Washing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo-link">
+      <img src="placeholder-logo.png" alt="ShineWorks Logo" class="logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="auto.html">Auto Detailing</a></li>
+        <li><a href="windows.html">Window Washing</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+  <section class="hero">
+    <div class="container">
+      <h2>Professional Auto Detailing & Window Washing</h2>
+      <p>We bring the shine to your ride and the clarity to your view.</p>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <div class="service-box">
+        <h3>Auto Detailing</h3>
+        <p>Interior & exterior packages, hand wash, wax, paint correction and more.</p>
+        <a href="auto.html" class="btn">Explore Auto Services</a>
+      </div>
+      <div class="service-box">
+        <h3>Window Washing</h3>
+        <p>Residential & commercial, one-time and recurring service options.</p>
+        <a href="windows.html" class="btn">Explore Window Services</a>
+      </div>
+    </div>
+  </section>
+
+<section class="gallery-carousel">
+  <h3>Our Work</h3>
+  <div class="carousel-wrapper">
+    <button class="carousel-arrow left" aria-label="Scroll Left">&#10094;</button>
+    <div class="carousel-track">
+      <a href="gallery.html"><img src="gallery1-thumb.jpg" alt="Gallery Image 1" /></a>
+      <a href="gallery.html"><img src="gallery2-thumb.jpg" alt="Gallery Image 2" /></a>
+      <a href="gallery.html"><img src="gallery3-thumb.jpg" alt="Gallery Image 3" /></a>
+      <a href="gallery.html"><img src="gallery4-thumb.jpg" alt="Gallery Image 4" /></a>
+      <a href="gallery.html"><img src="gallery5-thumb.jpg" alt="Gallery Image 5" /></a>
+    </div>
+    <button class="carousel-arrow right" aria-label="Scroll Right">&#10095;</button>
+  </div>
+  <p><a href="gallery.html" class="btn-secondary">See Full Gallery</a></p>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year"></span> Auto & Windows. All rights reserved.</p>
+  </div>
+  <script>
+    // Dynamically update the footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
