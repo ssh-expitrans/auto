@@ -219,15 +219,37 @@ main {
 
 /* Footer */
 footer {
-  background-color: #005f99;
-  color: #fff;
-  text-align: center;
+  background-color: #222; /* dark background */
+  color: #eee; /* light text */
   padding: 20px 0;
-  margin-top: 40px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+footer .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 footer p {
-  margin: 0;
+  margin: 8px 0;
+}
+
+footer a {
+  color: #66b2ff; /* soft blue links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #3399ff;
+  text-decoration: underline;
+}
+
+footer .contact-info p {
+  margin: 4px 0;
 }
 
 /* Utility Classes */
