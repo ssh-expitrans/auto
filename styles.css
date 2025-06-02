@@ -12,6 +12,12 @@ body {
   background-color: #f9f9f9;
 }
 
+nav {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+
 /* Container */
 .container {
   width: 90%;
@@ -30,6 +36,7 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
 }
 
 header h1, header h1.logo {
@@ -47,11 +54,37 @@ header nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  text-decoration: underline;
+  color: #90bdda;
 }
+
+/* --- Navigation --- */
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Mobile Styles --- */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
 
 /* Hero Section */
 .hero {
@@ -99,16 +132,6 @@ header nav ul li a:hover {
 
 .service-box p {
   margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #005f99;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 .btn:hover {
@@ -216,28 +239,6 @@ footer p {
   margin-top: 2rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .services .container {
-    flex-direction: column;
-  }
-
-  .service-box {
-    margin: 20px 0;
-  }
-
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-}
-
 
 /* --- Carousel --- */
 .hero-carousel {
@@ -279,7 +280,7 @@ footer p {
   bottom: 20px;
   left: 30px;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
+  background: #032c46;
   padding: 1rem 1.5rem;
   border-radius: 8px;
   max-width: 70%;
@@ -296,7 +297,7 @@ footer p {
 }
 
 .btn {
-  background-color: #007BFF;
+  background-color: #005f99;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -306,7 +307,7 @@ footer p {
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #032c46;
 }
 
 /* Fade animation for carousel */
@@ -328,15 +329,6 @@ footer p {
   flex-wrap: wrap;
 }
 
-.service-box {
-  background: #f7f7f7;
-  padding: 1.5rem;
-  flex: 1 1 300px;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
 .service-box h3 {
   margin-top: 0;
 }
@@ -354,7 +346,7 @@ footer p {
 }
 
 .btn-secondary:hover {
-  background-color: #333;
+  background-color: #032c46;
 }
 
 /* --- Gallery Preview --- */
@@ -507,4 +499,126 @@ footer p {
 
 .carousel-arrow.right {
   margin-left: 0.5rem;
+}
+
+/* --- Mobile Nav --- */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Responsive Layout Fixes --- */
+@media (max-width: 768px) {
+  /* Header layout stacks vertically */
+  .services .container {
+    flex-direction: column;
+  }
+
+  .service-box {
+    margin: 20px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Hero text adjustments */
+  .hero h2 {
+    font-size: 1.5rem;   /* smaller than desktop */
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #005f99;
+    width: 100%;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+ #navMenu {
+    overflow: hidden;
+  }
+
+  #navMenu ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #005f99;
+    width: 100%;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    display: flex;
+  }
+
+  #navMenu ul.show {
+    max-height: 300px; /* adjust as needed */
+    padding: 1rem 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .nav-toggle {
+    display: block;
+    align-self: center;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
 }

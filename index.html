@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShineWorks - Auto Detailing & Window Washing</title>
+  <title>Home - Auto Detailing & Window Washing</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header>
-  <div class="container">
-    <a href="index.html" class="logo-link">
-      <img src="placeholder-logo.png" alt="ShineWorks Logo" class="logo" />
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="placeholder-logo.png" alt="ShineWorks logo" />
     </a>
-    <nav>
+    
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <nav id="navMenu" class="mobile-nav">
       <ul>
         <li><a href="auto.html">Auto Detailing</a></li>
         <li><a href="windows.html">Window Washing</a></li>
@@ -20,6 +25,7 @@
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
+
   </div>
 </header>
 

@@ -8,11 +8,17 @@
 </head>
 <body>
 <header>
-  <div class="container">
-    <a href="index.html" class="logo-link">
-      <img src="placeholder-logo.png" alt="ShineWorks Logo" class="logo" />
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="placeholder-logo.png" alt="ShineWorks logo" />
     </a>
-    <nav>
+
+    
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <nav id="navMenu" class="mobile-nav">
       <ul>
         <li><a href="auto.html">Auto Detailing</a></li>
         <li><a href="windows.html">Window Washing</a></li>
@@ -20,6 +26,7 @@
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
+
   </div>
 </header>
 
@@ -64,6 +71,8 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
