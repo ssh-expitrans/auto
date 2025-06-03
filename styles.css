@@ -44,6 +44,11 @@ header h1, header h1.logo {
   font-weight: bold;
 }
 
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
 header nav ul {
   list-style: none;
   display: flex;
@@ -663,7 +668,7 @@ footer .contact-info p {
   }
 
   .logo img {
-    max-width: 150px;
+    max-width: 100px;
     height: auto;
   }
 
