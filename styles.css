@@ -732,3 +732,154 @@ footer .contact-info p {
   }
 
 }
+
+/* Mobile Styles for screens 768px and below */
+@media (max-width: 768px) {
+  /* Header - stack vertically and center */
+  header {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 15px 0;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Logo smaller and centered */
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  /* Show nav toggle button */
+  .nav-toggle {
+    display: block;
+    font-size: 2.2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  /* Navigation menu */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #005f99;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul.show {
+    max-height: 300px; /* Enough for menu */
+    padding: 1rem 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  /* Hero Section adjustments */
+  .hero {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Services section stacks vertically */
+  .services .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-box {
+    min-width: auto;
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  /* Gallery container scroll for mobile */
+  .gallery-container {
+    padding: 0 10px;
+    gap: 0.8rem;
+    justify-content: cen
+  }
+
+  /* Hide carousel arrows on mobile */
+  .carousel-arrow {
+    display: none;
+  }
+
+  /* Carousel becomes horizontally scrollable */
+  .carousel-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track a {
+    flex: 0 0 auto;
+    width: 80vw; /* make carousel items take most of screen width */
+    max-width: 300px;
+    scroll-snap-align: start;
+    margin-right: 1rem;
+  }
+
+  /* Footer font size smaller */
+  footer {
+    font-size: 13px;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center the images horizontally */
+    gap: 1rem; /* spacing between images */
+    padding: 0 1rem; /* some padding on sides */
+  }
+
+  .gallery-page img {
+    max-width: 90vw; /* images scale nicely on small screens */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .gallery-page img:hover {
+    transform: scale(1.05);
+  }
+}
