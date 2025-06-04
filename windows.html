@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Window Washing Services</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
 <header>
@@ -13,10 +16,7 @@
       <img src="testpng.png" alt="ShineWorks logo" />
     </a>
 
-    
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      ☰
-    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
 
     <nav id="navMenu" class="mobile-nav">
       <ul>
@@ -26,34 +26,52 @@
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
-
   </div>
 </header>
 
+<main>
+  <section class="service-list">
+    <h2>Our Window Washing Services</h2>
 
-  <main>
-    <section class="service-list">
-      <h2>Residential Services</h2>
+    <article data-aos="fade-up">
+      <h3>Residential Window Cleaning</h3>
       <p>Crystal clear window cleaning for homes of all sizes. We clean inside and out, including screens and tracks.</p>
+    </article>
 
-      <h2>Commercial Services</h2>
-      <p>Professional window cleaning for storefronts, offices, and buildings. One-time and recurring packages available.</p>
+    <article data-aos="fade-up">
+      <h3>Commercial Window Cleaning</h3>
+      <p>Professional service for storefronts, offices, and commercial buildings. One-time or recurring visits available.</p>
+    </article>
 
-      <h2>Packages</h2>
-      <ul>
-        <li>Standard: Exterior only - biweekly or monthly</li>
-        <li>Premium: Interior + Exterior with screen cleaning</li>
-        <li>Custom: Tailored solutions for multi-story or large buildings</li>
-      </ul>
-    </section>
-  </main>
+    <article data-aos="fade-up">
+      <h3>Standard Package</h3>
+      <p>Exterior-only window cleaning. Perfect for regular upkeep. Available biweekly or monthly.</p>
+    </article>
+
+    <article data-aos="fade-up">
+      <h3>Premium Package</h3>
+      <p>Interior + exterior window washing with screen and track cleaning. Ideal for a full refresh.</p>
+    </article>
+
+    <article data-aos="fade-up">
+      <h3>Custom Solutions</h3>
+      <p>Tailored services for large, multi-story homes or buildings. We handle hard-to-reach windows safely and effectively.</p>
+    </article>
+
+    <div class="pricing-wrapper" data-aos="fade-up">
+      <a href="contact.html" class="contact-pricing">Contact for Pricing</a>
+    </div>
+
+  </section>
+</main>
 
 <footer>
   <div class="container">
     <p>&copy; <span id="year"></span> Auto & Windows. All rights reserved.</p>
     <div class="contact-info">
-      <p>Contact us: <a href="tel:+1234567890">+1 (234) 567-890</a> | 
-         Email: <a href="mailto:info@autowindows.com">info@autowindows.com</a>
+      <p>
+        Contact us: <a href="tel:+1234567890">+1 (234) 567-890</a> | 
+        Email: <a href="mailto:info@autowindows.com">info@autowindows.com</a>
       </p>
       <p>
         <a href="https://facebook.com/yourpage" target="_blank" rel="noopener">Facebook</a>
@@ -61,12 +79,15 @@
     </div>
   </div>
   <script>
-    // Dynamically update the footer year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </footer>
 <script src="script.js"></script>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>

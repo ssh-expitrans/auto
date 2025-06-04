@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Auto Detailing Services</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
 <header>
@@ -35,30 +38,35 @@
     <section class="service-list">
       <h2>Our Detailing Packages</h2>
 
-      <article>
+      <article data-aos="fade-up">
         <h3>Exterior Wash & Wax</h3>
         <p>Thorough hand wash, wax application, tire shine, and bug removal. Leaves your vehicle gleaming and protected.</p>
-      </article>
+      </article data-aos="fade-up">
 
-      <article>
+      <article data-aos="fade-up">
         <h3>Interior Deep Clean</h3>
         <p>Vacuuming, carpet shampooing, stain removal, dashboard polish, and deodorizing for a fresh, clean cabin.</p>
-      </article>
+      </article data-aos="fade-up">
 
-      <article>
+      <article data-aos="fade-up">
         <h3>Full Detail</h3>
         <p>Includes all interior and exterior services. Perfect for restoring your vehicle inside and out.</p>
       </article>
 
-      <article>
+      <article data-aos="fade-up">
         <h3>Paint Correction</h3>
         <p>Removes swirl marks and light scratches. Polishes your paint to a mirror finish.</p>
       </article>
 
-      <article>
+      <article data-aos="fade-up">
         <h3>Ceramic Coating</h3>
         <p>Long-term paint protection with hydrophobic, high-gloss ceramic technology. Lasts up to 2 years.</p>
       </article>
+
+      <div class="pricing-wrapper" data-aos="fade-up">
+        <a href="contact.html" class="contact-pricing">Contact for Pricing</a>
+      </div>
+
     </section>
   </main>
 
@@ -80,6 +88,14 @@
   </script>
 </footer>
 <script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
 
 </body>
 </html>
